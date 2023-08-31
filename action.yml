@@ -1,6 +1,6 @@
-name: "Simple FTP deploy"
-author: "Kévin Painchaud"
-description: "Deploy files to an FTP server using GitHub actions"
+name: "LFTP deploy fork"
+author: "Damien Chantelouve"
+description: "Deploy files to an FTP server with LFTP using GitHub actions"
 inputs:
   ftp_host:
     description: "FTP host"
