@@ -55,13 +55,14 @@ Optional, can be used to set raw string of flag(s) or option(s) for lftp eg. `"-
 ## Example usage
 
 ```bash
-uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
-with:
-  ftp_host: ${{ secrets.FTP_HOST }}
-  ftp_username: ${{ secrets.FTP_USERNAME }}
-  ftp_password: ${{ secrets.FTP_PASSWORD }}
-  local_source_dir: "dist"
-  dist_target_dir: "www/my-app"
-  delete: "true"
-  exclude: "'^logs/' '^README.md'"
+- name: 📁 Sync files
+  uses: damchtlv/simple-ftp-deploy-action@v1.0.0
+  with:
+    ftp_host: ${{ secrets.FTP_HOST }}
+    ftp_username: ${{ secrets.FTP_USERNAME }}
+    ftp_password: ${{ secrets.FTP_PASSWORD }}
+    local_source_dir: "wp-content/themes/val"
+    dist_target_dir: "sites/autodeploytest"
+    exclude: "'^logs/' '^README.md' '^.git/' '^.github/' '^node_modules/'"
+    other_flags: "--only-newer --ignore-time"
 ```
