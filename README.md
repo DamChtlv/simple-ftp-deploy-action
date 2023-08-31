@@ -1,4 +1,4 @@
-# Simple FTP deploy action
+# LFTP deploy fork
 
 Deploy files to an FTP server using GitHub actions
 
